@@ -28,8 +28,8 @@
                 extend: {
                     colors: {
                         primary: "#FFDC26", 
-                        common: "#FFF9F4",
-                        default: "FFFFFF"
+                        color: "#FFF9F4",
+                        cardcolor: "#F9DF8A"
                     }
                 }
             }
@@ -38,10 +38,10 @@
 </head>
 
 <body>
-    <!-- Header section Start-->
+   
     <header>
         <!-- Navbar Start-->
-        <nav class="font-sora">
+        <nav class="font-sora bg-color">
             <div class="navbar bg-base-100 items-center">
                 <div class="navbar-start">
                     <div>
@@ -94,22 +94,131 @@
               </div>
 
         </nav>
-        <!-- Banner section Start-->
-         <div class="flex justify-center mt-16 mb-36 w-full max-w-screen-xl mx-auto ">
+           <!-- Banner section Start-->
+   <div class="h-[530px] lg:h-[749px] flex justify-start mt-16 mb-36 max-w-screen-xl mx-auto">
             
-            <!-- Text Section -->
-            <div class="absolute lg:absolute text-left mx-4">
-                <h1 class="text-5xl font-adlam mb-4 mt-6">Pamper Your Pet,<br> Because They Deserve<br> the Bes</h1>
-                <p class="text-gray-400 text-xl font-sora mb-6">Discover a world of treats, toys, and essentials handpicked for<br> your furry friends. Shop now and make tails wag with joy!</p>
-                <button class="bg-primary border-none text-black font-sora btn btn-primary hover:bg-primary hover:text-white">Find a pet</button>
-                <div>
-             
-                <div class="relative lg:relative -z-10  lg:-mt-96 -mt-28">
-                    <img src="images/cat-big.png" alt="">
-                </div>
-             </div>
-         </div>
-    </header>
+    <!-- Text Section -->
+    <div class="absolute lg:absolute text-left mx-4">
+        <h1 class="text-5xl font-adlam mb-4 mt-6">Pamper Your Pet,<br> Because They Deserve<br> the Bes</h1>
+        <p class="text-gray-400 text-xl font-sora mb-6">Discover a world of treats, toys, and essentials handpicked for<br> your furry friends. Shop now and make tails wag with joy!</p>
+        <button class="bg-primary border-none text-black font-sora btn btn-primary hover:bg-primary hover:text-white">Find a pet</button>
+        <div>
+     
+        <div class="w-full relative lg:relative -z-10  lg:-mt-96 -mt-24">
+            <img src="images/cat-big.png" alt="">
+        </div>
+     </div>
+ </div>
+</div>
+</header>
+   
+<main class="max-w-screen-xl mx-auto"  >
+
+
+   <!-- Browse By Categories section start -->
+    
+    <section>
+        <!-- card grid -->
+        <div class="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-4 lg:gap-6 mx-4">
+            <!-- card-1 -->
+        <div class="card h-[280px] bg-cardcolor shadow-xl">
+            <figure class="px-12 py-9">
+                <div class="avatar">
+                    <div class="px-7 py-7 w-28 rounded-full bg bg-white">
+                      <div class="w-14 h-14">
+                        <img src="images/dog-cartoon.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="font-adlam text-xl">Dog</h2>
+              <p class="font-sora">3 items</p>
+            </div>
+          </div>
+            <!-- card-2 -->
+        <div class="card h-[280px] bg-cardcolor shadow-xl">
+            <figure class="px-12 py-9">
+                <div class="avatar">
+                    <div class="px-7 py-7 w-28 rounded-full bg bg-white">
+                      <div class="w-14 h-14">
+                        <img src="images/fish-cartoon.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="font-adlam text-xl">Fish</h2>
+              <p class="font-sora">3 items</p>
+            </div>
+          </div>
+            <!-- card-3 -->
+        <div class="card h-[280px] bg-cardcolor shadow-xl">
+            <figure class="px-12 py-9">
+                <div class="avatar">
+                    <div class="px-7 py-7 w-28 rounded-full bg bg-white">
+                      <div class="w-14 h-14">
+                        <img src="images/cat-cartoon.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="font-adlam text-xl">Cat</h2>
+              <p class="font-sora">3 items</p>
+            </div>
+          </div>
+            <!-- card-4 -->
+        <div class="card h-[280px] bg-cardcolor shadow-xl">
+            <figure class="px-12 py-9">
+                <div class="avatar">
+                    <div class="px-7 py-7 w-28 rounded-full bg bg-white">
+                      <div class="w-14 h-14">
+                        <img src="images/bird-cartoon.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="font-adlam text-xl">Birds</h2>
+              <p class="font-sora">3 items</p>
+            </div>
+          </div>
+            <!-- card-5 -->
+        <div class="card h-[280px] bg-cardcolor shadow-xl">
+            <figure class="px-12 py-9">
+                <div class="avatar">
+                    <div class="px-7 py-7 w-28 rounded-full bg bg-white">
+                      <div class="w-14 h-14">
+                        <img src="images/mouse-cartoon.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="font-adlam text-xl">Small pet</h2>
+              <p class="font-sora">3 items</p>
+            </div>
+          </div>
+            <!-- card-6 -->
+        <div class="card h-[280px] bg-cardcolor shadow-xl">
+            <figure class="px-12 py-9">
+                <div class="avatar">
+                    <div class="px-7 py-7 w-28 rounded-full bg bg-white">
+                      <div class="w-14 h-14">
+                        <img src="images/rabbit-cartoon.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="font-adlam text-xl">Rabit</h2>
+              <p class="font-sora">2 items</p>
+            </div>
+          </div>
+        </div>
+    </section>
+</main>
 </body>
 
 </html>
