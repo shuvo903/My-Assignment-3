@@ -2,223 +2,253 @@
 <html lang="en" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browse4 Pets</title>
-    <!-- Google Font CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap"
-        rel="stylesheet">
-    <!-- DaidyUI CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .font-adlam {
-            font-family: "ADLaM Display";
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse4 Pets</title>
+  <!-- Google Font CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap"
+    rel="stylesheet">
+  <!-- DaidyUI CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .font-adlam {
+      font-family: "ADLaM Display";
+    }
 
-        .font-sora {
-            font-family: "Sora";
+    .font-sora {
+      font-family: "Sora";
+    }
+    .animetion-text-gradient{
+      background-size: 300%;
+      -webkit-animation: animetiongradient 9s ease infinite alternate;
+      -moz-animation:animetiongradient 9s ease infinite alternate;
+      animation: animetiongradient 9s ease infinite alternate;
+    }
+    @keyframes animetiongradient {
+      0%{
+        background-position: 0% 50%;
+      }
+      50%{
+        background-position: 100% 50%;
+      }
+      100%{
+        background-position: 0% 50%;
+      }
+    }
+
+    .animation{
+      opacity: 0;
+      transform: translateY(30px);
+      animation: moveup 0.5s linear forwards;
+      animation-delay: 1.5s;
+    }
+    @keyframes moveup{
+      100%{
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#FFDC26",
+            color: "#FFF9F4",
+            cardcolor: "#F9DF8A",
+            
+          }
         }
-    </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#FFDC26", 
-                        color: "#FFF9F4",
-                        cardcolor: "#F9DF8A"
-                    }
-                }
-            }
-        }
-    </script>
+      }
+    }
+  </script>
 </head>
 
 <body>
-   
-    <header>
-        <!-- Navbar Start-->
-        <nav class="font-sora bg-color">
-            <div class="navbar bg-base-100 items-center">
-                <div class="navbar-start">
-                    <div>
-                       <img src="images/logo-header.png" alt="">
-                    </div>
-                  <a class="hidden lg:flex text-3xl font-semibold ml-3">Browse<span class="text-primary">4</span>Pets</a>
-                </div>
-                <div class="navbar-center hidden lg:flex gap-8">
-                  <ul class="menu menu-horizontal px-1">
-                    <li>
-                        <a>Find a pet</a>
-                    </li>
-                    <li>
-                        <a>Breeds</a>
-                    </li>
-                    <li>
-                        <a>Contact us</a>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div class="navbar-end gap-3">
-                    <div class="hidden lg:flex">
-                        <img src="images/bell (1) 1.png" alt="">
-                    </div>
-                    <div class="hidden lg:flex">
-                        <img src="images/Search.png" alt="">
-                    </div>
-                  <a class="hidden border-primary hover:bg-primary hover:border-none lg:flex btn btn-outline hover:text-black">Login</a>
-                  <a class="hidden border-primary hover:bg-primary hover:border-none lg:flex btn btn-outline hover:text-black">Register</a>
 
-                </div>
-                <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden ml-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4 6h16M4 12h8m-8 6h16" />
-                      </svg>
-                    </div>
-               
-                  </div>
-              </div>
+  <header>
+    <!-- Navbar Start-->
+    <nav class="font-sora bg-color">
+      <div class="navbar bg-base-100 items-center">
+        <div class="navbar-start">
+          <div>
+            <img src="images/logo-header.png" alt="">
+          </div>
+          <a class="hidden lg:flex text-3xl font-semibold ml-3">Browse<span class="text-primary">4</span>Pets</a>
+        </div>
+        <div class="navbar-center hidden lg:flex gap-8">
+          <ul class="menu menu-horizontal px-1">
+            <li>
+              <a>Find a pet</a>
+            </li>
+            <li>
+              <a>Breeds</a>
+            </li>
+            <li>
+              <a>Contact us</a>
+            </li>
+          </ul>
+        </div>
 
-        </nav>
-           <!-- Banner section Start-->
-   <div class="h-[530px] lg:h-[749px] flex justify-start mt-16 mb-36 max-w-screen-xl mx-auto">
-            
-    <!-- Text Section -->
-    <div class="absolute lg:absolute text-left mx-4">
-        <h1 class="text-5xl font-adlam mb-4 mt-6">Pamper Your Pet,<br> Because They Deserve<br> the Bes</h1>
-        <p class="text-gray-400 text-xl font-sora mb-6">Discover a world of treats, toys, and essentials handpicked for<br> your furry friends. Shop now and make tails wag with joy!</p>
-        <button class="bg-primary border-none text-black font-sora btn btn-primary hover:bg-primary hover:text-white">Find a pet</button>
+        <div class="navbar-end gap-3">
+          <div class="hidden lg:flex">
+            <img src="images/bell (1) 1.png" alt="">
+          </div>
+          <div class="hidden lg:flex">
+            <img src="images/Search.png" alt="">
+          </div>
+          <a
+            class="hidden border-primary hover:bg-primary hover:border-primary lg:flex btn btn-outline hover:text-black">Login</a>
+          <a
+            class="hidden border-primary hover:bg-primary hover:border-primary lg:flex btn btn-outline hover:text-black">Register</a>
+
+        </div>
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden ml-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+
+        </div>
+      </div>
+
+    </nav>
+    <!-- Banner section Start-->
+    <div class="h-[530px] lg:h-[749px] flex justify-start mt-16 mb-36 max-w-screen-xl mx-auto">
+
+      <!-- Text Section -->
+      <div class="absolute lg:absolute text-left mx-4">
+        <h1 class=" animation text-5xl font-adlam mb-4 mt-6"><span class="animetion-text-gradient bg-gradient-to-r from-[#ee00ff] via-[#ffc400] to-[#77d8ff] bg-clip-text text-transparent ">Pamper Your Pet,<br> Because They Deserve<br> the Bes</span></h1>
+        <p class="animation text-gray-400 text-xl font-sora mb-6">Discover a world of treats, toys, and essentials handpicked
+          for<br> your furry friends. Shop now and make tails wag with joy!</p>
+        <button
+          class="animation hidden border-primary hover:bg-primary hover:border-primary lg:flex btn btn-outline hover:text-black">Find a
+          pet</button>
         <div>
-     
-        <div class="w-full relative lg:relative -z-10  lg:-mt-96 -mt-24">
+
+          <div class="animation w-full relative lg:relative -z-10  lg:-mt-96 -mt-24">
             <img src="images/cat-big.png" alt="">
+          </div>
         </div>
-     </div>
- </div>
-</div>
-</header>
-   
-<main class="max-w-screen-xl mx-auto"  >
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-screen-xl mx-auto">
 
 
-   <!-- Browse By Categories section start -->
-    
+    <!-- Browse By Categories section start -->
+
     <section>
-        <!-- card grid -->
-        <div class="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-4 lg:gap-6 mx-4">
-            <!-- card-1 -->
+      <!-- card grid -->
+      <div class="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-4 lg:gap-6 mx-4">
+        <!-- card-1 -->
         <div class="card h-[280px] bg-cardcolor shadow-xl">
-            <figure class="px-12 py-9">
-                <div class="avatar">
-                    <div class="px-7 py-7 w-28 rounded-full bg bg-white">
-                      <div class="w-14 h-14">
-                        <img src="images/dog-cartoon.png" alt="">
-                      </div>
-                    </div>
-                  </div>
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="font-adlam text-xl">Dog</h2>
-              <p class="font-sora">3 items</p>
+          <figure class="px-12 py-9">
+            <div class="avatar">
+              <div class="px-7 py-7 w-28 rounded-full bg bg-white">
+                <div class="w-14 h-14">
+                  <img src="images/dog-cartoon.png" alt="">
+                </div>
+              </div>
             </div>
-          </div>
-            <!-- card-2 -->
-        <div class="card h-[280px] bg-cardcolor shadow-xl">
-            <figure class="px-12 py-9">
-                <div class="avatar">
-                    <div class="px-7 py-7 w-28 rounded-full bg bg-white">
-                      <div class="w-14 h-14">
-                        <img src="images/fish-cartoon.png" alt="">
-                      </div>
-                    </div>
-                  </div>
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="font-adlam text-xl">Fish</h2>
-              <p class="font-sora">3 items</p>
-            </div>
-          </div>
-            <!-- card-3 -->
-        <div class="card h-[280px] bg-cardcolor shadow-xl">
-            <figure class="px-12 py-9">
-                <div class="avatar">
-                    <div class="px-7 py-7 w-28 rounded-full bg bg-white">
-                      <div class="w-14 h-14">
-                        <img src="images/cat-cartoon.png" alt="">
-                      </div>
-                    </div>
-                  </div>
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="font-adlam text-xl">Cat</h2>
-              <p class="font-sora">3 items</p>
-            </div>
-          </div>
-            <!-- card-4 -->
-        <div class="card h-[280px] bg-cardcolor shadow-xl">
-            <figure class="px-12 py-9">
-                <div class="avatar">
-                    <div class="px-7 py-7 w-28 rounded-full bg bg-white">
-                      <div class="w-14 h-14">
-                        <img src="images/bird-cartoon.png" alt="">
-                      </div>
-                    </div>
-                  </div>
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="font-adlam text-xl">Birds</h2>
-              <p class="font-sora">3 items</p>
-            </div>
-          </div>
-            <!-- card-5 -->
-        <div class="card h-[280px] bg-cardcolor shadow-xl">
-            <figure class="px-12 py-9">
-                <div class="avatar">
-                    <div class="px-7 py-7 w-28 rounded-full bg bg-white">
-                      <div class="w-14 h-14">
-                        <img src="images/mouse-cartoon.png" alt="">
-                      </div>
-                    </div>
-                  </div>
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="font-adlam text-xl">Small pet</h2>
-              <p class="font-sora">3 items</p>
-            </div>
-          </div>
-            <!-- card-6 -->
-        <div class="card h-[280px] bg-cardcolor shadow-xl">
-            <figure class="px-12 py-9">
-                <div class="avatar">
-                    <div class="px-7 py-7 w-28 rounded-full bg bg-white">
-                      <div class="w-14 h-14">
-                        <img src="images/rabbit-cartoon.png" alt="">
-                      </div>
-                    </div>
-                  </div>
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="font-adlam text-xl">Rabit</h2>
-              <p class="font-sora">2 items</p>
-            </div>
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="font-adlam text-xl">Dog</h2>
+            <p class="font-sora">3 items</p>
           </div>
         </div>
+        <!-- card-2 -->
+        <div class="card h-[280px] bg-cardcolor shadow-xl">
+          <figure class="px-12 py-9">
+            <div class="avatar">
+              <div class="px-7 py-7 w-28 rounded-full bg bg-white">
+                <div class="w-14 h-14">
+                  <img src="images/fish-cartoon.png" alt="">
+                </div>
+              </div>
+            </div>
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="font-adlam text-xl">Fish</h2>
+            <p class="font-sora">3 items</p>
+          </div>
+        </div>
+        <!-- card-3 -->
+        <div class="card h-[280px] bg-cardcolor shadow-xl">
+          <figure class="px-12 py-9">
+            <div class="avatar">
+              <div class="px-7 py-7 w-28 rounded-full bg bg-white">
+                <div class="w-14 h-14">
+                  <img src="images/cat-cartoon.png" alt="">
+                </div>
+              </div>
+            </div>
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="font-adlam text-xl">Cat</h2>
+            <p class="font-sora">3 items</p>
+          </div>
+        </div>
+        <!-- card-4 -->
+        <div class="card h-[280px] bg-cardcolor shadow-xl">
+          <figure class="px-12 py-9">
+            <div class="avatar">
+              <div class="px-7 py-7 w-28 rounded-full bg bg-white">
+                <div class="w-14 h-14">
+                  <img src="images/bird-cartoon.png" alt="">
+                </div>
+              </div>
+            </div>
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="font-adlam text-xl">Birds</h2>
+            <p class="font-sora">3 items</p>
+          </div>
+        </div>
+        <!-- card-5 -->
+        <div class="card h-[280px] bg-cardcolor shadow-xl">
+          <figure class="px-12 py-9">
+            <div class="avatar">
+              <div class="px-7 py-7 w-28 rounded-full bg bg-white">
+                <div class="w-14 h-14">
+                  <img src="images/mouse-cartoon.png" alt="">
+                </div>
+              </div>
+            </div>
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="font-adlam text-xl">Small pet</h2>
+            <p class="font-sora">3 items</p>
+          </div>
+        </div>
+        <!-- card-6 -->
+        <div class="card h-[280px] bg-cardcolor shadow-xl">
+          <figure class="px-12 py-9">
+            <div class="avatar">
+              <div class="px-7 py-7 w-28 rounded-full bg bg-white">
+                <div class="w-14 h-14">
+                  <img src="images/rabbit-cartoon.png" alt="">
+                </div>
+              </div>
+            </div>
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="font-adlam text-xl">Rabit</h2>
+            <p class="font-sora">2 items</p>
+          </div>
+        </div>
+      </div>
     </section>
-</main>
+
+  </main>
 </body>
 
 </html>
