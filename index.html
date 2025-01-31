@@ -21,37 +21,41 @@
     .font-sora {
       font-family: "Sora";
     }
-    .animetion-text-gradient{
+
+    .animetion-text-gradient {
       background-size: 300%;
-      -webkit-animation: animetiongradient 9s ease infinite alternate;
-      -moz-animation:animetiongradient 9s ease infinite alternate;
-      animation: animetiongradient 9s ease infinite alternate;
+      -webkit-animation: animetiongradient 6s ease infinite alternate;
+      -moz-animation: animetiongradient 6s ease infinite alternate;
+      animation: animetiongradient 6s ease infinite alternate;
     }
+
     @keyframes animetiongradient {
-      0%{
+      0% {
         background-position: 0% 50%;
       }
-      50%{
+
+      50% {
         background-position: 100% 50%;
       }
-      100%{
+
+      100% {
         background-position: 0% 50%;
       }
     }
 
-    .animation{
+    .animation {
       opacity: 0;
       transform: translateY(30px);
       animation: moveup 0.5s linear forwards;
       animation-delay: 1.5s;
     }
-    @keyframes moveup{
-      100%{
+
+    @keyframes moveup {
+      100% {
         opacity: 1;
         transform: translateY(0px);
       }
     }
-
   </style>
   <script>
     tailwind.config = {
@@ -59,9 +63,9 @@
         extend: {
           colors: {
             primary: "#FFDC26",
-            color: "#FFF9F4",
             cardcolor: "#F9DF8A",
-            
+            Secondary: "#FFF9F4"
+
           }
         }
       }
@@ -73,8 +77,8 @@
 
   <header>
     <!-- Navbar Start-->
-    <nav class="font-sora bg-color">
-      <div class="navbar bg-base-100 items-center">
+    <nav class="font-sora ">
+      <div class="navbar bg-base-100 items-center bg-Secondary">
         <div class="navbar-start">
           <div>
             <img src="images/logo-header.png" alt="">
@@ -102,11 +106,11 @@
           <div class="hidden lg:flex">
             <img src="images/Search.png" alt="">
           </div>
-          <a
-            class="hidden border-primary hover:bg-primary hover:border-primary lg:flex btn btn-outline hover:text-black">Login</a>
-          <a
-            class="hidden border-primary hover:bg-primary hover:border-primary lg:flex btn btn-outline hover:text-black">Register</a>
+          <button
+            class="hidden border-primary hover:bg-primary hover:border-primary lg:flex btn btn-outline hover:text-black">Login</button>
 
+          <button
+            class="hidden border-primary hover:bg-primary hover:border-primary lg:flex btn btn-outline hover:text-black">Register</button>
         </div>
         <div class="dropdown">
           <div tabindex="0" role="button" class="btn btn-ghost lg:hidden ml-1">
@@ -124,16 +128,20 @@
     <div class="h-[530px] lg:h-[749px] flex justify-start mt-16 mb-36 max-w-screen-xl mx-auto">
 
       <!-- Text Section -->
-      <div class="absolute lg:absolute text-left mx-4">
-        <h1 class=" animation text-5xl font-adlam mb-4 mt-6"><span class="animetion-text-gradient bg-gradient-to-r from-[#ee00ff] via-[#ffc400] to-[#77d8ff] bg-clip-text text-transparent ">Pamper Your Pet,<br> Because They Deserve<br> the Bes</span></h1>
-        <p class="animation text-gray-400 text-xl font-sora mb-6">Discover a world of treats, toys, and essentials handpicked
+      <div class="relative lg:absolute text-left mx-4">
+        <h1 class=" animation text-5xl font-adlam mb-4 mt-6"><span
+            class="animetion-text-gradient bg-gradient-to-r from-[#ee00ff] via-[#ffc400] to-[#77d8ff] bg-clip-text text-transparent ">Pamper
+            Your Pet,<br> Because They Deserve<br> the Bes</span></h1>
+        <p class="animation text-gray-400 text-xl font-sora mb-6">Discover a world of treats, toys, and essentials
+          handpicked
           for<br> your furry friends. Shop now and make tails wag with joy!</p>
         <button
-          class="animation hidden border-primary hover:bg-primary hover:border-primary lg:flex btn btn-outline hover:text-black">Find a
+          class="animation border-primary bg-primary hover:border-primary hover:bg-white lg:flex btn btn-outline hover:text-black">Find
+          a
           pet</button>
         <div>
 
-          <div class="animation w-full relative lg:relative -z-10  lg:-mt-96 -mt-24">
+          <div class="animation w-full absolute lg:relative -z-10  lg:-mt-96 -mt-24">
             <img src="images/cat-big.png" alt="">
           </div>
         </div>
@@ -141,14 +149,16 @@
     </div>
   </header>
 
-  <main class="max-w-screen-xl mx-auto">
+  <main class="">
 
 
     <!-- Browse By Categories section start -->
 
-    <section>
+    <section class="mx-4 mt-32 mb-32 max-w-screen-xl mx-auto">
+      <h2 class="text-3xl font-adlam text-left mb-12">Browse By Categories</h2>
       <!-- card grid -->
-      <div class="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-4 lg:gap-6 mx-4">
+      <div class="mb-36 grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-4 lg:gap-6">
+
         <!-- card-1 -->
         <div class="card h-[280px] bg-cardcolor shadow-xl">
           <figure class="px-12 py-9">
@@ -248,6 +258,222 @@
       </div>
     </section>
 
+
+    <!--Trending Pet Products section start-->
+    <section class=" lg:bg-Secondary lg:px-32 lg:py-36">
+
+      <div class="mb-12 max-w-screen-xl mx-auto">
+        <h3 class="text-4xl font-adlam ">Trending Pet Products</h3>
+      </div>
+      <div class="flex lg:flex-row flex-col max-w-screen-xl mx-auto">
+        <!-- Big card-1 -->
+        <div class="relative lg:w-4/12 bg-cardcolor rounded-lg text-left space-y-6 pt-12 pb-44 px-8">
+          <h4 class="text-3xl font-adlam">T- Shirt For Dogs</h4>
+          <p class="font-Sora">Discover a world of treats, toys, and <br>essentials handpicked for </p>
+          <button
+            class=" border-white bg-white hover:bg-white hover:border-primary lg:flex btn btn-outline hover:text-black font-Sora text-xl">Shop
+            Now</button>
+          <img class="absolute bottom-0 right-2 w-48" src="images/cute-pet-mid.png" alt="">
+        </div>
+
+
+
+        <div class="lg:ml-6 grid grid-cols-2 lg:grid-cols-3 md:grid-cols-3 lg:gap-6 gap-3 mt-6">
+
+
+
+          <!-- small card-1 -->
+
+          <div class="bg-white border-2 flex  items-center rounded-xl lg:px-4 lg:py-4 lg:min-w-64 px-2 py-2 w-auto ">
+            <div class=" bg-Secondary">
+              <div class="bg-Secondary px-5 py-5 rounded-lx">
+                <div class="lg:w-14 lg:h-14 w-7 h-7">
+                  <img src="images/dog-cartoon.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="ml-4 space-y-2 ">
+              <div class="flex ">
+                <img class="w-5 h-5" src="images/fi_2107957.png" alt="">
+                <p class="ml-3">4.5</p>
+              </div>
+              <div>
+                <h5 class="font-sora">Pet Bed</h5>
+                <p>$39.99</p>
+              </div>
+            </div>
+          </div>
+          <!-- small card-2 -->
+
+          <div class="bg-white border-2 flex  items-center rounded-xl lg:px-4 lg:py-4 lg:min-w-64 px-2 py-2 w-auto">
+            <div class=" bg-Secondary">
+              <div class="bg-Secondary px-5 py-5 rounded-lx">
+                <div class="lg:w-14 lg:h-14 w-7 h-7">
+                  <img src="images/rabbit-cartoon.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="ml-4 space-y-2 ">
+              <div class="flex ">
+                <img class="w-5 h-5" src="images/fi_2107957.png" alt="">
+                <p class="ml-3">4.5</p>
+              </div>
+              <div>
+                <h5 class="font-sora">Pet Bed</h5>
+                <p>$39.99</p>
+              </div>
+            </div>
+          </div>
+          <!-- small card-3 -->
+
+          <div class="bg-white border-2 flex  items-center rounded-xl lg:px-4 lg:py-4 lg:min-w-64 px-2 py-2 w-auto">
+            <div class=" bg-Secondary">
+              <div class="bg-Secondary px-5 py-5 rounded-lx">
+                <div class="lg:w-14 lg:h-14 w-7 h-7">
+                  <img src="images/fish-cartoon.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="ml-4 space-y-2 ">
+              <div class="flex ">
+                <img class="w-5 h-5" src="images/fi_2107957.png" alt="">
+                <p class="ml-3">4.5</p>
+              </div>
+              <div>
+                <h5 class="font-sora">Pet Bed</h5>
+                <p>$39.99</p>
+              </div>
+            </div>
+          </div>
+          <!-- small card-4 -->
+
+          <div class="bg-white border-2 flex  items-center rounded-xl lg:px-4 lg:py-4 lg:min-w-64 px-2 py-2 w-auto">
+            <div class=" bg-Secondary">
+              <div class="bg-Secondary px-5 py-5 rounded-lx">
+                <div class="lg:w-14 lg:h-14 w-7 h-7">
+                  <img src="images/fish-cartoon.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="ml-4 space-y-2 ">
+              <div class="flex ">
+                <img class="w-5 h-5" src="images/fi_2107957.png" alt="">
+                <p class="ml-3">4.5</p>
+              </div>
+              <div>
+                <h5 class="font-sora">Pet Bed</h5>
+                <p>$39.99</p>
+              </div>
+            </div>
+          </div>
+          <!-- small card-5 -->
+
+          <div class="bg-white border-2 flex  items-center rounded-xl lg:px-4 lg:py-4 lg:min-w-64 px-2 py-2 w-auto">
+            <div class=" bg-Secondary">
+              <div class="bg-Secondary px-5 py-5 rounded-lx">
+                <div class="lg:w-14 lg:h-14 w-7 h-7">
+                  <img src="images/bird-cartoon.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="ml-4 space-y-2 ">
+              <div class="flex ">
+                <img class="w-5 h-5" src="images/fi_2107957.png" alt="">
+                <p class="ml-3">4.5</p>
+              </div>
+              <div>
+                <h5 class="font-sora">Pet Bed</h5>
+                <p>$39.99</p>
+              </div>
+            </div>
+          </div>
+          <!-- small card-6 -->
+
+          <div class="bg-white border-2 flex  items-center rounded-xl lg:px-4 lg:py-4 lg:min-w-64 px-2 py-2 w-auto">
+            <div class=" bg-Secondary">
+              <div class="bg-Secondary px-5 py-5 rounded-lx">
+                <div class="lg:w-14 lg:h-14 w-7 h-7">
+                  <img src="images/pet-couch.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="ml-4 space-y-2 ">
+              <div class="flex ">
+                <img class="w-5 h-5" src="images/fi_2107957.png" alt="">
+                <p class="ml-3">4.5</p>
+              </div>
+              <div>
+                <h5 class="font-sora">Pet Bed</h5>
+                <p>$39.99</p>
+              </div>
+            </div>
+          </div>
+          <!-- small card-7 -->
+
+          <div class="bg-white border-2 flex  items-center rounded-xl lg:px-4 lg:py-4 lg:min-w-64 px-2 py-2 w-auto">
+            <div class=" bg-Secondary">
+              <div class="bg-Secondary px-5 py-5 rounded-lx">
+                <div class="lg:w-14 lg:h-14 w-7 h-7">
+                  <img src="images/bird-cartoon.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="ml-4 space-y-2 ">
+              <div class="flex ">
+                <img class="w-5 h-5" src="images/fi_2107957.png" alt="">
+                <p class="ml-3">4.5</p>
+              </div>
+              <div>
+                <h5 class="font-sora">Pet Bed</h5>
+                <p>$39.99</p>
+              </div>
+            </div>
+          </div>
+          <!-- small card-8 -->
+
+          <div class="bg-white border-2 flex  items-center rounded-xl lg:px-4 lg:py-4 lg:min-w-64 px-2 py-2 w-auto">
+            <div class=" bg-Secondary">
+              <div class="bg-Secondary px-5 py-5 rounded-lx">
+                <div class="lg:w-14 lg:h-14 w-7 h-7">
+                  <img src="images/pet-couch.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="ml-4 space-y-2 ">
+              <div class="flex ">
+                <img class="w-5 h-5" src="images/fi_2107957.png" alt="">
+                <p class="ml-3">4.5</p>
+              </div>
+              <div>
+                <h5 class="font-sora">Pet Bed</h5>
+                <p>$39.99</p>
+              </div>
+            </div>
+          </div>
+          <!-- small card-9 -->
+
+          <div class="bg-white border-2 flex  items-center rounded-xl lg:px-4 lg:py-4 lg:min-w-64 px-2 py-2 w-auto">
+            <div class=" bg-Secondary">
+              <div class="bg-Secondary px-5 py-5 rounded-lx">
+                <div class="lg:w-14 lg:h-14 w-7 h-7">
+                  <img src="images/rabbit-cartoon.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="ml-4 space-y-2 ">
+              <div class="flex ">
+                <img class="w-5 h-5" src="images/fi_2107957.png" alt="">
+                <p class="ml-3">4.5</p>
+              </div>
+              <div>
+                <h5 class="font-sora">Pet Bed</h5>
+                <p>$39.99</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 
